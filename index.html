@@ -11,6 +11,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: Arial;
       }
       #titulo {
         font-size: 50px;
@@ -47,8 +48,8 @@
         justify-content: center;
       }
       #final img {
-        width: 70vw;
-        max-width: 700px;
+        width: 100vw;
+        max-width: 10000px;
       }
     </style>
   </head>
@@ -59,16 +60,16 @@
       <button onclick="clicar()">Clique aqui!</button>
     </div>
     <div id="final">
-      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LJZY5K904Ib4i1F40oQQJVdtD7x69k9rvg&s'>
+      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-SK52B4qEybUpIFR_JhAWNzRv_74w1HNwXA&s'>
     </div>
   </body>
   <script>
     function clicar() {
-      document.getElementById("botao").innerHTML = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LJZY5K904Ib4i1F40oQQJVdtD7x69k9rvg&s'>";
+      document.getElementById("botao").innerHTML = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cy8GdfT8AQV3lIZMiYYrK9Oel6F9Yd7R76C8fBFx-wT3WVYNWbi5bBQ&s=10'>";
       setTimeout(mudarConteudo, 1500);
     }
     function mudarConteudo() {
-      document.getElementById("conteudo").innerHTML = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LJZY5K904Ib4i1F40oQQJVdtD7x69k9rvg&s'>";
+      document.getElementById("conteudo").innerHTML = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG3430p_q031unVf1rZIY847NS3cszcDr5Ww6fianL8w&s=10'>";
       setTimeout(mudarTudo, 1500)
     }
     function mudarTudo() {
