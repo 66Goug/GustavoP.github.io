@@ -1,82 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: Arial;
-      }
-      
-      header {
-        text-align: center;
-        padding: 20px;
-        font-size: 28px;
-        font-weight: bold;
-      }
-      
-      #conteudo {
+    <title>Site teste</title>
+    
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        height: 100vh;
         display: flex;
         flex-direction: column;
+        align-items: center;
+      }
+      #titulo {
+        font-size: 50px;
+        height: 20vh;
+        display: flex;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 80px);
-        text-align: center;
       }
-    button {
-      width: 180px;
-      height: 180px;
-      background-color: red;
-      color: white;
-      font-size: 22px;
-      cursor: pointer;
-      border: none;
-      border-radius: 50%;
-    }
-    img {
-      width: 700px;
-      height: 700px;
-      max-width: 100%;
-    }
-  </style>
-  
-  <title>Site do Gustavo</title>
-  
+      #conteudo {
+        font-size: 20px;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: red;
+        color: white;
+        height: 120px;
+        width: 120px;
+        border: none;
+        border-radius: 50%;
+        font-size: 30px;
+      }
+      #botao {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+      }
+      #final {
+        display: none;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+      #final img {
+        width: 70vw;
+        max-width: 700px;
+      }
+    </style>
   </head>
-  
-<body>
-
-  <div id="conteudo">
-    <h1>Bem vindo</h1>
-    <p>Esse é apenas um site simples</p>
-    <br> <br>
-    <p>Favor não clicar no botão</p>
-
-    <br><br><br>
-
-    <button onclick="clicar()">Não clique aqui!</button>
-  </div>
-
+  <body>
+    <div id="titulo">Site de testes</div>
+    <div id="conteudo">Testando!</div>
+    <div id="botao">
+      <button onclick="clicar()">Clique aqui!</button>
+    </div>
+    <div id="final">
+      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LJZY5K904Ib4i1F40oQQJVdtD7x69k9rvg&s'>
+    </div>
+  </body>
   <script>
     function clicar() {
-      document.getElementById("conteudo").innerHTML = "<h1>EU AVISEI</h1>";
-
-      setTimeout(mostrarImagemrapida, 4000);
+      document.getElementById("botao").innerHTML = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LJZY5K904Ib4i1F40oQQJVdtD7x69k9rvg&s'>";
+      setTimeout(mudarConteudo, 1500);
     }
-    function mostrarImagemrapida() {
-      document.getElementById("conteudo").innerHTML =
-      "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LJZY5K904Ib4i1F40oQQJVdtD7x69k9rvg&s'>";
-      
-       setTimeout(mostrarimagemfinal, 2000);
+    function mudarConteudo() {
+      document.getElementById("conteudo").innerHTML = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LJZY5K904Ib4i1F40oQQJVdtD7x69k9rvg&s'>";
+      setTimeout(mudarTudo, 1500)
     }
-    function mostrarimagemfinal() {
-      document.getElementById("conteudo").
-      innerHTML =
-      "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR21nJyU4IpXM5JVKoQ88XFMl16MWzlfTaMYA&s'>";
+    function mudarTudo() {
+      document.getElementById("titulo").style.display = "none";
+      document.getElementById("conteudo").style.display = "none";
+      document.getElementById("botao").style.display = "none";
+      document.getElementById("final").style.display = "flex";
     }
-    
-    </script>
-
-</body>
-
+  </script>
 </html>
